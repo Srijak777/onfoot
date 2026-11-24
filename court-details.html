@@ -2,33 +2,42 @@
 <html>
     <head>
         <title>Court details - ONFOOT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <header>
         <h1>ONFOOT</h1>
         <span>Notifications</span>
+        </header>
 
         <main>
-            <a href="index.html">Court details</a>
+            <a href="index.html">&lt; Court details</a>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Riverfield Futsal">
-            <h2>Riverfield Futsal, Court B</h2>
+            <h2 id="court-name">Riverfield Futsal, Court B</h2>
+            <p>Nayabazar : Open until 8 PM : Rs. 1,200 per hour</p>
             <h3>Pick a date</h3>
+            <div class="dates">
             <button>Fri 20</button>
-            <button>Sat 21</button>
+            <button class="selected">Sat 21</button>
             <button>Sun 22</button>
+            </div>
 
             <h3>Pick a time</h3>
+            <div class="slots">
             <button>2 PM - Free</button>
-            <button disabled>3 PM - Booked</button>
+            <button disabled class="booked">3 PM - Booked</button>
             <button>4 PM - Free</button>
             <button>5 PM - Free</button>
-             <button>6 PM - Selected</button>
-             <button disabled>7 PM - Booked</button>
-             <button disabled>8 PM - Booked</button>
+             <button class="selected">6 PM - Selected</button>
+             <button disabled class="booked">7 PM - Booked</button>
+             <button disabled class="booked">8 PM - Booked</button>
+             </div>
              <a href="index.html">
                 <button>Confirm booking</button>
              </a>
              
         </main>
-        <p>Nayabazar : Open until 8 PM : Rs. 1,200 per hour</p>
     </body>
 </html>

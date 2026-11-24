@@ -2,16 +2,22 @@
 <html>
     <head>
         <title> ONFOOT </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <header class="topbar">
         <h1>ONFOOT</h1>
-        <span>Notifications</span>
+        <span class="bell">Notifications</span>
+        </header>
+
 
         <main>
             <h2>Hi, Srijak</h2>
             <input type="text" placeholder="Search courts or area">
 
-            <section>
+            <section class="card">
                 <h3>Futsal Arena, Court A</h3>
                 <p>Sat, 21 Nov 6 PM</p>
                 <button>View Booking</button>
@@ -19,28 +25,37 @@
            <h3>Nearby courts</h3>
            <a href="#">See all</a> 
 
-           <article>
+           <div class="courts">
+
+           <article class="card court">
             <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLdesaht6d6f3MxE-uXInu9Xta1q0nIB3YCZ_ho9axq2tfmWFMffn-Ab3KLUI1la8GGlgfJ9zxkOwIGF83jJSFzdupL1LqXgQG5P8Cbz9Zf08UetNZtt6EMgeYKYx_C_n_QCP4EwoA=s1360-w1360-h1020-rw" alt="Balami Futsal">
+            <div>
             <h4>Balami Futsal, Court A</h4>
             <p>Sitapaila : Rs. 1700</p>
             <p>1 free slot today</p>
+            </div>
            </article>
 
-           <article>
+           <article class="card court">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayF5autfF8srCRCBk8ClYlSBcaTBYYb7ujxm7zzR_Og37H6h4BAi33sCA&s=10" alt="Sitapaila Futsal">
+            <div>
             <h4>Sitapaila Futsal, Court A</h4>
             <p>Sitapaila : Rs. 1000</p>
             <p>5 free slots today</p>
+            </div>
            </article>
 
            <a href="court-details.html">
-           <article>
+           <article class="card court">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Riverfield Futsal">
+            <div>
             <h4>Riverfield Futsal, Court B</h4>
             <p>Nayabazar : Rs. 1200</p>
             <p>4 free slot today</p>
+            </div>
            </article>
            </a>
+           </div>
         </main>
 
         <nav>

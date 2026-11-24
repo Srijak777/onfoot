@@ -1,0 +1,168 @@
+:root {
+    --primary: #185FA5;
+    --text: #1B2430;
+    --muted: #5F6672;
+    --border: #E2E5EA;
+    --bg: #F1F2F4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color : blue;
+}
+
+
+.booked {
+    background-color: lightgray;
+    color: gray;
+}
+
+.selected {
+    background-color: #185fa5;
+    color: white;
+}
+
+#court-name {
+    color: #185fA5;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify{
+    text-align: justify;
+}
+
+main {
+    width: 390px;
+    margin: 0 auto;
+}
+
+body {
+font-family: "Inter", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 14px;
+}
+
+body {
+    background-color: #F1F2F4;
+    color: #1B2430;
+}
+
+h1 {
+    color: #185FA5;
+}
+
+a {
+    color: #185FA5;
+    text-decoration: none;
+}
+
+.court {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.court img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+}
+
+nav a{
+    font-size: 12px;
+}
+
+.slot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dates {
+    display:flex;
+    gap: 10px;
+}
+
+.dates button {
+    flex: 1;
+}
+
+@media (min-width: 900px) {
+    body {
+        background-color: lightyellow;
+    }
+}
+
+main {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+@media (min-width: 900px){
+    main {
+        max-width: 1000px;
+    }
+
+    .court {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
