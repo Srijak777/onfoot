@@ -1,72 +1,82 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Admin Dashboard - ONFOOT</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header class="topbar">
-        <h1>ONFOOT Admin</h1>
-        <span>Notifications</span>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ONFOOT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
 
-        <main>
-            <h2>My Futsal</h2>
-            <p>Manage your courts and bookings</p>
-            <section class="card stats">
-                <div class="card stat">
-                    <strong>8</strong>
-                    <p>Bookings today</p>
-                </div>
-                <div class="card stat">
-                <strong>3</strong>
-                <p>To verify</p>
-                </div>
-                <div class="card stat">
-                    <strong>2</strong>
-                    <p>Courts</p>
-                </div>
-            </section>
-            <h3>My Courts</h3>
-            <a href="add-court.html">
-                <button>+ Add court</button>
-            </a>
+    <div class="app">
 
-            <article class="card court">
-                <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLdesaht6d6f3MxE-uXInu9Xta1q0nIB3YCZ_ho9axq2tfmWFMffn-Ab3KLUI1la8GGlgfJ9zxkOwIGF83jJSFzdupL1LqXgQG5P8Cbz9Zf08UetNZtt6EMgeYKYx_C_n_QCP4EwoA=s1360-w1360-h1020-rw" alt="Balami Futsal">
-                <div>
-                <h4>Balami Futsal, Court A</h4>
-                <p>Rs. 1700 : 6 AM to 8 PM</p>
-                <button>Edit</button>
-                </div>
-            </article>
+        <aside class="sidebar">
+            <span class="logo logo-desktop">ONFOOT Admin</span>
+            <nav class="nav">
+                <a href="admin-dashboard.html" class="active"><i class="bi bi-grid"></i><span>Dashboard</span></a>
+                <a href="add-court.html"><i class="bi bi-record-circle"></i><span>Courts</span></a>
+                <a href="#"><i class="bi bi-calendar3"></i><span>Bookings</span></a>
+                <a href="#"><i class="bi bi-person"></i><span><span class="only-mobile">Profile</span><span class="only-desktop">Players</span></span></a>
+                <a href="#"><i class="bi bi-sliders"></i><span>Settings</span></a>
+            </nav>
+        </aside>
 
-            <article class="card court">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayF5autfF8srCRCBk8ClYlSBcaTBYYb7ujxm7zzR_Og37H6h4BAi33sCA&s=10" alt="Riverfield Futsal">
-                <div>
-                <h4>Riverfield Futsal, Court B</h4>
-                <p>Rs. 1200 : 6 AM to 8 PM</p>
-                <button>Edit</button>
-                </div>    
-            </article>
+        <div class="main">
 
-            <article class="card court">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Sitapaila Futsal">
-                <div>
-                <h4>Sitapaila Futsal, Court A</h4>
-                <p>Rs. 1000 : 6 AM to 8 PM</p>
-                <button>Edit</button>
+            <header class="topbar">
+                <span class="logo logo-mobile">ONFOOT Admin</span>
+                <i class="bi bi-bell bell"></i>
+            </header>
+
+            <main class="content">
+                <h2 class="page-title"><span class="only-mobile">My Futsal</span><span class="only-desktop">Riverfield Futsal</span></h2>
+                <p class="sub">Manage your courts and bookings</p>
+
+                <section class="stats">
+                    <div class="card stat"><b>8</b><p>Bookings today</p></div>
+                    <div class="card stat"><b>3</b><p><span class="only-mobile">To verify</span><span class="only-desktop">Players to verify</span></p></div>
+                    <div class="card stat"><b>2</b><p>Courts</p></div>
+                </section>
+
+                <div class="section-head">
+                    <h3><span class="only-mobile">My Courts</span><span class="only-desktop">My courts</span></h3>
+                    <a href="add-court.html" class="btn-sm only-mobile">+ Add court</a>
                 </div>
-            </article>
-        </main>
-        <nav>
-        <a href="admin-dashboard.html">Dashboard</a>
-        <a href="#">Courts</a>
-        <a href="#">Bookings</a>
-        <a href="#">Profile</a>
-        <a href="#">Settings</a>
-        </nav>
-    </body>
+
+                <div class="courts">
+                    <article class="card court">
+                        <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLdesaht6d6f3MxE-uXInu9Xta1q0nIB3YCZ_ho9axq2tfmWFMffn-Ab3KLUI1la8GGlgfJ9zxkOwIGF83jJSFzdupL1LqXgQG5P8Cbz9Zf08UetNZtt6EMgeYKYx_C_n_QCP4EwoA=s1360-w1360-h1020-rw" alt="Balami Futsal">
+                        <div>
+                            <h4>Balami Futsal, Court A</h4>
+                            <p>Rs. 1700 : 6 AM to 8 PM</p>
+                            <button class="edit">Edit</button>
+                        </div>
+                    </article>
+                    <article class="card court">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Riverfield Futsal">
+                        <div>
+                            <h4>Riverfield Futsal, Court B</h4>
+                            <p>Rs. 1200 : 6 AM to 8 PM</p>
+                            <button class="edit">Edit</button>
+                        </div>
+                    </article>
+                    <article class="card court court-extra">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQayF5autfF8srCRCBk8ClYlSBcaTBYYb7ujxm7zzR_Og37H6h4BAi33sCA&s=10" alt="Sitapaila Futsal">
+                        <div>
+                            <h4>Sitapaila Futsal, Court A</h4>
+                            <p>Rs. 1000 : 6 AM to 8 PM</p>
+                            <button class="edit">Edit</button>
+                        </div>
+                    </article>
+                    <a href="add-court.html" class="add-tile only-desktop"><i class="bi bi-plus-lg"></i><span>Add court</span></a>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+</body>
 </html>
