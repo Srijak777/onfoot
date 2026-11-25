@@ -1,0 +1,198 @@
+:root {
+    --primary: #185FA5;
+    --primary-light: #E6F1FB;
+    --text: #1B2430;
+    --muted: #5F6672;
+    --border: #E2E5EA;
+    --danger: #C62828;
+    --danger-bg: #FDECEC;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.app {
+    max-width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    position: relative;
+}
+
+.sidebar {
+    order: 2;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0;
+}
+
+.bell {
+    font-size: 18px;
+}
+
+.content {
+    padding: 10px 20px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    background: #fff;
+}
+
+.nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.nav i {
+    font-size: 22px;
+}
+
+.nav a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    background: #fff;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 6px 0 12px;
+}
+
+.crumbs {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+@media (max-width: 899px) {
+    .only-desktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .only-mobile {
+        display: none !important;
+    }
+
+    .app {
+        max-width: none;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        order: 0;
+        width: 192px;
+        padding: 28px 12px;
+        border-right: 1px solid var(--border);
+    }
+
+    .logo-desktop {
+        display: block;
+        margin: 0 0 18px 10px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0;
+    }
+
+    .bell {
+        position: absolute;
+        top: 30px;
+        right: 32px;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 0;
+        border-top: none;
+    }
+
+    .nav a {
+        flex-direction: row;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .nav i {
+        font-size: 17px;
+    }
+
+    .nav a.active {
+        background: var(--primary-light);
+    }
+
+    .content {
+        padding: 26px 32px;
+    }
+}
