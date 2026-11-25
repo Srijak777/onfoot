@@ -1,43 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Court details - ONFOOT</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-        <h1>ONFOOT</h1>
-        <span>Notifications</span>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court details - ONFOOT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="court-details.css">
+</head>
+<body>
 
-        <main>
-            <a href="index.html">&lt; Court details</a>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Riverfield Futsal">
-            <h2 id="court-name">Riverfield Futsal, Court B</h2>
-            <p>Nayabazar : Open until 8 PM : Rs. 1,200 per hour</p>
-            <h3>Pick a date</h3>
-            <div class="dates">
-            <button>Fri 20</button>
-            <button class="selected">Sat 21</button>
-            <button>Sun 22</button>
-            </div>
+    <div class="app">
 
-            <h3>Pick a time</h3>
-            <div class="slots">
-            <button>2 PM - Free</button>
-            <button disabled class="booked">3 PM - Booked</button>
-            <button>4 PM - Free</button>
-            <button>5 PM - Free</button>
-             <button class="selected">6 PM - Selected</button>
-             <button disabled class="booked">7 PM - Booked</button>
-             <button disabled class="booked">8 PM - Booked</button>
-             </div>
-             <a href="index.html">
-                <button>Confirm booking</button>
-             </a>
-             
-        </main>
-    </body>
+        <aside class="sidebar">
+            <span class="logo logo-desktop">ONFOOT</span>
+            <nav class="nav">
+                <a href="index.html"><i class="bi bi-house"></i><span>Home</span></a>
+                <a href="court-details.html" class="active"><i class="bi bi-record-circle"></i><span>Courts</span></a>
+                <a href="#"><i class="bi bi-calendar3"></i><span>Bookings</span></a>
+                <a href="#"><i class="bi bi-person"></i><span>Profile</span></a>
+                <a href="#"><i class="bi bi-sliders"></i><span>Settings</span></a>
+            </nav>
+        </aside>
+
+        <div class="main">
+
+            <header class="topbar">
+                <span class="logo logo-mobile">ONFOOT</span>
+            </header>
+
+            <main class="content">
+                <a href="index.html" class="back only-mobile"><i class="bi bi-chevron-left"></i> Court details</a>
+                <p class="crumbs only-desktop"><a href="index.html">Courts</a> &gt; Riverfield Futsal, Court B</p>
+
+                <div class="detail">
+
+                    <div class="info">
+                        <img class="hero" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWHApO1FfqqU9x6wXlGbG1do_pEs7jQHaNKCTyq-oQ75hpYH8fjRY8Duw&s=10" alt="Riverfield Futsal">
+                        <h1 class="title">Riverfield Futsal, Court B</h1>
+                        <p class="meta">Nayabazar : Open until 8 PM<span class="only-mobile"> : Rs. 1,200 per hour</span></p>
+                        <p class="price only-desktop">Rs. 1,200 per hour</p>
+                    </div>
+
+                    <div class="booking">
+                        <h3 class="only-desktop">Pick a date</h3>
+                        <div class="dates">
+                            <button class="date"><span>Fri</span><b>20</b></button>
+                            <button class="date selected"><span>Sat</span><b>21</b></button>
+                            <button class="date"><span>Sun</span><b>22</b></button>
+                        </div>
+
+                        <h3>Pick a time</h3>
+                        <div class="slots">
+                            <button class="slot"><span>2 PM</span><small><i class="bi bi-check2"></i> Free</small></button>
+                            <button class="slot booked" disabled><span>3 PM</span><small><i class="bi bi-lock"></i> Booked</small></button>
+                            <button class="slot"><span>4 PM</span><small><i class="bi bi-check2"></i> Free</small></button>
+                            <button class="slot"><span>5 PM</span><small><i class="bi bi-check2"></i> Free</small></button>
+                            <button class="slot selected"><span>6 PM</span><small><i class="bi bi-check2"></i> Selected</small></button>
+                            <button class="slot booked" disabled><span>7 PM</span><small><i class="bi bi-lock"></i> Booked</small></button>
+                            <button class="slot booked" disabled><span>8 PM</span><small><i class="bi bi-lock"></i> Booked</small></button>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+</body>
 </html>
