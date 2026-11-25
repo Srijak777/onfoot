@@ -1,0 +1,341 @@
+:root {
+    --primary: #185FA5;
+    --primary-light: #E6F1FB;
+    --text: #1B2430;
+    --muted: #5F6672;
+    --border: #E2E5EA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* 3. Layout (mobile first) */
+.app {
+    max-width: 390px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    position: relative;
+}
+
+.sidebar {
+    order: 2;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0;
+}
+
+.bell {
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 20px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    background: #fff;
+}
+
+.nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.nav i {
+    font-size: 22px;
+}
+
+.nav a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* 5. Components */
+.search {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.search i {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: var(--muted);
+}
+
+.search input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px 0 40px;
+    border: 1px solid #C9CED6;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    background: #fff;
+}
+
+.label {
+    display: none;
+}
+
+.booking {
+    margin-bottom: 20px;
+}
+
+.booking h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.booking p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 4px 0 16px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.section-head h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.see-all {
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: underline;
+}
+
+.courts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.court {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+}
+
+.court img {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.court h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.court p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* 6. Desktop layout (always last) */
+@media (min-width: 900px) {
+    .app {
+        max-width: none;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        order: 0;
+        width: 192px;
+        padding: 28px 12px;
+        border-right: 1px solid var(--border);
+    }
+
+    .logo-desktop {
+        display: block;
+        margin: 0 0 18px 10px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0;
+    }
+
+    .bell {
+        position: absolute;
+        top: 30px;
+        right: 32px;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 0;
+        border-top: none;
+    }
+
+    .nav a {
+        flex-direction: row;
+        gap: 12px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .nav i {
+        font-size: 17px;
+    }
+
+    .nav a.active {
+        background: var(--primary-light);
+    }
+
+    .content {
+        padding: 26px 32px;
+    }
+
+    .search {
+        order: -1;
+        width: 338px;
+        margin-bottom: 12px;
+    }
+
+    .search input {
+        height: 36px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .search i {
+        top: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 6px;
+    }
+
+    .label {
+        display: block;
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 6px;
+    }
+
+    .booking {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .booking p {
+        margin: 2px 0 0;
+    }
+
+    .btn {
+        width: auto;
+        padding: 12px 20px;
+    }
+
+    .courts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .court {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+    }
+
+    .court img {
+        width: 100%;
+        height: 120px;
+    }
+
+    .court-river { order: 1; }
+    .court-sita  { order: 2; }
+    .court-balami { order: 3; }
+}
